@@ -101,6 +101,20 @@ FirstPhone/
 ./gradlew :app:installDebug
 ```
 
+### Build an APK in the cloud (no local setup)
+
+This project ships with a GitHub Actions workflow at
+`.github/workflows/android.yml` that builds `app-debug.apk` on every push and
+exposes it as a downloadable artifact. See **[BUILDING_APK.md](BUILDING_APK.md)**
+for the full guide.
+
+TL;DR:
+
+1. Push the project to GitHub.
+2. Open **Actions** tab → workflow auto-runs (~6–10 min on first run).
+3. Download `app-debug-apk` artifact from the completed run.
+4. Unzip → `adb install app-debug.apk`.
+
 ---
 
 ## First-Run Flow
